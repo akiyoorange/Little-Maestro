@@ -13,6 +13,9 @@ public class ErhythmQScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Answer1~4のボタンを取得
+        GameObject[] Answers = GameObject.FindGameObjectsWithTag("AnswerButton");
+
         // Imageコンポーネントを取得して変数 m_Image に格納
         m_Image = GetComponent<Image>();
 
@@ -31,6 +34,9 @@ public class ErhythmQScript : MonoBehaviour
                 m_Image.sprite = m_Sprite[Random.Range(0,9)];  
         }
 
-       
+        if (m_Image.sprite = m_Sprite[0])
+        {
+           
+        }
     }
 }
