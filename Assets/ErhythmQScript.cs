@@ -27,6 +27,14 @@ public class ErhythmQScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool answer = true;
+
+        if (m_Image.sprite = m_Sprite[0])
+        {
+
+        }
+
+
         // スペースキーが押された場合
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -34,9 +42,6 @@ public class ErhythmQScript : MonoBehaviour
                 m_Image.sprite = m_Sprite[Random.Range(0,9)];  
         }
 
-        if (m_Image.sprite = m_Sprite[0])
-        {
-           
-        }
+       
     }
 }
