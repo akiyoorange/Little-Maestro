@@ -30,5 +30,7 @@ public class ErhythmQScript : MonoBehaviour
                 // 二問目以降の問題スプライトの変更
                 m_Image.sprite = m_Sprite[Random.Range(0,9)];  
         }
+
+       
     }
 }
