@@ -21,7 +21,7 @@ public class ErhythmQScript : MonoBehaviour
 
         // 一問目のスプライトをランダムに表示
         //　m_Sprite[]に格納した問題のスプライトをRandomで割り当て）
-        m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+        m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length-1)];
     }
 
     // Update is called once per frame
@@ -39,13 +39,13 @@ public class ErhythmQScript : MonoBehaviour
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
         else
         {
             WrongPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0,m_Sprite.Length - 1)];
         }
     }
 
@@ -56,13 +56,13 @@ public class ErhythmQScript : MonoBehaviour
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
         else
         {
             WrongPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
     }
 
@@ -73,13 +73,13 @@ public class ErhythmQScript : MonoBehaviour
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
         else
         {
             WrongPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
     }
 
@@ -90,13 +90,13 @@ public class ErhythmQScript : MonoBehaviour
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
         else
         {
             WrongPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
-            m_Image.sprite = m_Sprite[Random.Range(0, 9)];
+            m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
         }
     }
 }
