@@ -23,5 +23,10 @@ public class TimerController : MonoBehaviour
 		seconds = (int)totalTime;
 		timerText.text = seconds.ToString();
 
+        if(seconds == 0)
+		{
+			totalTime = 0;
+		}
+
 	}
 }

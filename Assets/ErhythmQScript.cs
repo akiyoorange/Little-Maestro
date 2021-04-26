@@ -36,7 +36,7 @@ public class ErhythmQScript : MonoBehaviour
     // 左上
     public void Button_1()
     {
-        if (m_Image.sprite = m_Sprite[1|2|6])
+        if (m_Image.sprite == m_Sprite[1] || m_Image.sprite == m_Sprite[2] || m_Image.sprite == m_Sprite[6])
         {
             //正解
             RightPanel.SetActive(true);
@@ -55,7 +55,7 @@ public class ErhythmQScript : MonoBehaviour
     // 右上
     public void Button_2()
     {
-        if (m_Image.sprite = m_Sprite[3|5])
+        if (m_Image.sprite == m_Sprite[3] || m_Image.sprite == m_Sprite[5] || m_Image.sprite == m_Sprite[4] )
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
@@ -72,7 +72,7 @@ public class ErhythmQScript : MonoBehaviour
     // 左下
     public void Button_3()
     {
-        if (m_Image.sprite = m_Sprite[0|7|9|10])
+        if (m_Image.sprite == m_Sprite[0] || m_Image.sprite == m_Sprite[7] || m_Image.sprite == m_Sprite[9] || m_Image.sprite == m_Sprite[10])
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
@@ -89,7 +89,7 @@ public class ErhythmQScript : MonoBehaviour
     // 右下
     public void Button_4()
     {
-        if (m_Image.sprite = m_Sprite[4|8])
+        if ( m_Image.sprite == m_Sprite[8])
         {
             RightPanel.SetActive(true);
             // 二問目以降の問題スプライトの変更
