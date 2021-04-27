@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnswerSystemScript : MonoBehaviour
 {
-    public int AnswerNumber;
+    public int AnswerNumber = 0;
     
     GameObject Answer1;
     Answer1Script Script1;
@@ -26,6 +26,7 @@ public class AnswerSystemScript : MonoBehaviour
         Script3 = Answer3.GetComponent<Answer3Script>();
         Answer4 = GameObject.Find("Answer4");
         Script4 = Answer4.GetComponent<Answer4Script>();
+
     }
 
     // Update is called once per frame
@@ -39,18 +40,38 @@ public class AnswerSystemScript : MonoBehaviour
         if (Answer1 == 1)
         {
             AnswerNumber = 1;
+
+            // コルーチンの起動
+            StartCoroutine(DelayCoroutine());
         }
         else if (Answer2 == 2)
         {
             AnswerNumber = 2;
+
+            // コルーチンの起動
+            StartCoroutine(DelayCoroutine());
         }
         else if (Answer3 == 3)
         {
             AnswerNumber = 3;
+            // コルーチンの起動
+            StartCoroutine(DelayCoroutine());
+
         }
         else if (Answer4 == 4)
         {
             AnswerNumber = 4;
+            // コルーチンの起動
+            StartCoroutine(DelayCoroutine());
         }
+
     }
+    private IEnumerator DelayCoroutine()
+    {
+        // 3秒間待つ
+        yield return new WaitForSeconds(0.1f);
+
+        AnswerNumber = 0;
+    }
+
 }

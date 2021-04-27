@@ -21,5 +21,16 @@ public class Answer2Script : MonoBehaviour
     public void OnClickButtonStart()
     {
         Answer2 = 2;
+        // コルーチンの起動
+        StartCoroutine(DelayCoroutine());
+    }
+
+    // コルーチン本体
+    private IEnumerator DelayCoroutine()
+    {
+        // 3秒間待つ
+        yield return new WaitForSeconds(0.1f);
+
+        Answer2 = 0;
     }
 }

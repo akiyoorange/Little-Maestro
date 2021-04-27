@@ -50,22 +50,7 @@ public class question_Erhythm : MonoBehaviour
         Timescript = CountdownSystem.GetComponent<TimerController>();
 
         //正解の番号（RightNumber）を指定
-        if (m_Image.sprite == m_Sprite[1] || m_Image.sprite == m_Sprite[2] || m_Image.sprite == m_Sprite[5])
-        {
-            RightNumber = 1;
-        }
-        else if (m_Image.sprite == m_Sprite[3] || m_Image.sprite == m_Sprite[4] || m_Image.sprite == m_Sprite[9])
-        {
-            RightNumber = 2;
-        }
-        else if (m_Image.sprite == m_Sprite[0] || m_Image.sprite == m_Sprite[6] || m_Image.sprite == m_Sprite[8])
-        {
-            RightNumber = 3;
-        }
-        else if (m_Image.sprite == m_Sprite[7])
-        {
-            RightNumber = 4;
-        }
+        GetRightNumber();
 
         //回答結果を取得
         Answersystem = GameObject.Find("AnswerSystem");
@@ -85,7 +70,7 @@ public class question_Erhythm : MonoBehaviour
         {
             Answer = "Right";
         }
-        else if (RightNumber != AnswerNumber & AnswerNumber != 0)
+        else if (RightNumber != AnswerNumber && AnswerNumber != 0)
         {
             Answer = "Wrong";
         }
@@ -120,34 +105,57 @@ public class question_Erhythm : MonoBehaviour
                 isCalledOnce = true;
                 Score = +5;
             }
-            // 3秒間待つ
-            yield return new WaitForSeconds(1);
-
-            RightPanel.SetActive(false); ;
-
             AnswerNumber = 0;
+            
+            // 1秒間待つ
+            yield return new WaitForSeconds(0.3f);
             Answer = null;
+            RightPanel.SetActive(false); 
+          
             // 二問目以降の問題スプライトの変更
             m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
+            GetRightNumber();
 
         }
         else if (Answer == "Wrong")
         {
             WrongPanel.SetActive(true);
-
-            // 3秒間待つ
-            yield return new WaitForSeconds(1);
-
+            AnswerNumber = 0;
+           
+            // 1秒間待つ
+            yield return new WaitForSeconds(0.3f);
+            Answer = null;
             WrongPanel.SetActive(false);
 
-            AnswerNumber = 0;
-            Answer = null;
             // 二問目以降の問題スプライトの変更
             m_Image.sprite = m_Sprite[Random.Range(0, m_Sprite.Length - 1)];
+
+            GetRightNumber();
         }   
 
         
 
      }
+
+    void GetRightNumber()
+    {
+        //正解の番号（RightNumber）を指定
+        if (m_Image.sprite == m_Sprite[1] || m_Image.sprite == m_Sprite[2] || m_Image.sprite == m_Sprite[5])
+        {
+            RightNumber = 1;
+        }
+        else if (m_Image.sprite == m_Sprite[3] || m_Image.sprite == m_Sprite[4] || m_Image.sprite == m_Sprite[9])
+        {
+            RightNumber = 2;
+        }
+        else if (m_Image.sprite == m_Sprite[0] || m_Image.sprite == m_Sprite[6] || m_Image.sprite == m_Sprite[8])
+        {
+            RightNumber = 3;
+        }
+        else if (m_Image.sprite == m_Sprite[7])
+        {
+            RightNumber = 4;
+        }
+    }
 
 }
