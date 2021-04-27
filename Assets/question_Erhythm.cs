@@ -108,7 +108,7 @@ public class question_Erhythm : MonoBehaviour
             AnswerNumber = 0;
             
             // 1秒間待つ
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             Answer = null;
             RightPanel.SetActive(false); 
           
@@ -123,7 +123,7 @@ public class question_Erhythm : MonoBehaviour
             AnswerNumber = 0;
            
             // 1秒間待つ
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
             Answer = null;
             WrongPanel.SetActive(false);
 
