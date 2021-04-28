@@ -12,6 +12,30 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/ScoreScene.unity
+    guid: 1a22fd42008bd634da504cfe315728dd
+  - enabled: 1
     path: Assets/Scenes/Easy/EasyRhythmScene.unity
     guid: a96f184299e711b4da9116b382ac3e94
+  - enabled: 1
+    path: Assets/Scenes/Easy/EasyNotesScene.unity
+    guid: ce17d5b354994eb4593253944dfde8bb
+  - enabled: 1
+    path: Assets/Scenes/Easy/EasyReadingScene.unity
+    guid: 8aa79d7dd27efb54f99a0e7f7d33adfc
+  - enabled: 1
+    path: Assets/Scenes/Easy/EasyBookScene.unity
+    guid: c2eb6ee4065fbef49830e64747c7c631
+  - enabled: 1
+    path: Assets/Scenes/Normal/NormalVocabularyScene.unity
+    guid: bb1c7241c3e6c06408da03dc589ab0a9
+  - enabled: 1
+    path: Assets/Scenes/Normal/NormalKey&ChordScene.unity
+    guid: e888e22c1bda6b945af554cdfab45f4f
+  - enabled: 1
+    path: Assets/Scenes/Normal/NormalHistoryScene.unity
+    guid: 8c124d26755056649950a5d9303b1fb1
+  - enabled: 1
+    path: Assets/Scenes/ExpertScene.unity
+    guid: 9a368e918ae0763478722f334a72d849
   m_configObjects: {}
