@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class RecoveryTimeScript : MonoBehaviour
 {
@@ -10,15 +11,19 @@ public class RecoveryTimeScript : MonoBehaviour
     public int hour;
     public float second;
 
-   
 
-    [SerializeField]public bool GetNotes;
+
+    [SerializeField] public bool GetNotes;
 
     // Use this for initialization
     void Start()
     {
         RecoveryTimeText = GetComponent<Text>();
         GetNotes = false;
+
+        HPrecovery();
+
+
     }
 
     // Update is called once per frame
@@ -27,7 +32,7 @@ public class RecoveryTimeScript : MonoBehaviour
 
         GetNotes = false;
 
-        
+
 
         //インした時間ーログアウトした時間
 
@@ -57,12 +62,20 @@ public class RecoveryTimeScript : MonoBehaviour
 
         RecoveryTimeText.text = "-" + hour.ToString() + ":" + minute.ToString("00");
 
-        if(hour == 0 && minute ==0)
+        if (hour == 0 && minute == 0)
         {
             GetNotes = true;
         }
     }
+
+    void HPrecovery()
+    {
+        PlayerPrefs.GetString("OUTTicks");
+        long OUTticks = long.Parse(ApplicationController.outticks);
+
+        long INticks = ApplicationController.INTicks;
+
+      
+    }
+
 }
-
-
-

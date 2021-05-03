@@ -5,38 +5,45 @@ using System;
 
 public class ApplicationController : MonoBehaviour
 {
-    //ログインした時間
-    public static string datetimeIN;
-    //ログアウトした時間
-    public static string datetimeOUT;
+    DateTime today = DateTime.Today;
+    DateTime now = DateTime.Now;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static string outticks;
 
-    // Update is called once per frame
-    void Update()
+    public static long INTicks;
+
+    // アプリケーションが終了する前に呼び出し
+    public void OnApplicationQuit()
     {
-        
+        //ログアウト時間をタイマ刻み数で取得する
+        long OUTTicks = DateTime.Now.Ticks;
+
+        //longを文字変換
+        string outticks = OUTTicks.ToString();
+        //デバイスに保存
+        PlayerPrefs.SetString("OUTTicks", outticks) ;
+        PlayerPrefs.Save();
+
     }
 
     //アプリケーションの起動時に呼び出し
     public void Awake()
     {
-        Debug.Log("Awake");
-
-        datetimeIN = DateTime.Now.ToShortTimeString();
-        Debug.Log(datetimeIN);
+       //ログイン時間をタイマ刻み数で取得する
+        long INTicks = DateTime.Now.Ticks;
     }
 
-    // アプリケーションが終了する前に呼び出し
-    public void OnApplicationQuit()
+    
+
+    void Start()
     {
-        Debug.Log("OnApplicationQuit");
 
-        datetimeOUT = DateTime.Now.ToShortTimeString();
-        Debug.Log(datetimeOUT);
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
 }

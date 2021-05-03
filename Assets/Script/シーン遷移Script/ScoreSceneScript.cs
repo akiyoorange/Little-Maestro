@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreSceneScript : MonoBehaviour
 {
@@ -18,11 +18,9 @@ public class ScoreSceneScript : MonoBehaviour
 
     }
 
+    public GameObject ScorePanel;
     public void OnClickStartButton()
     {
-        QuickRanking.Instance.SaveRanking(PlayerPrefs.GetString("UserName"), PlayerPrefs.GetInt("Weekly"));
-
-
-        SceneManager.LoadScene("ScoreScene");
+        ScorePanel.SetActive(true);
     }
 }
