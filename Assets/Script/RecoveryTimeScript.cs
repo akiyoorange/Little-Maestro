@@ -10,6 +10,8 @@ public class RecoveryTimeScript : MonoBehaviour
     public int hour;
     public float second;
 
+   
+
     [SerializeField]public bool GetNotes;
 
     // Use this for initialization
@@ -22,7 +24,13 @@ public class RecoveryTimeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         GetNotes = false;
+
+        
+
+        //インした時間ーログアウトした時間
+
         second -= Time.deltaTime;
 
         if (hour <= 0 && minute <= 0 && second <= 0)

@@ -20,6 +20,9 @@ public class ScoreSceneScript : MonoBehaviour
 
     public void OnClickStartButton()
     {
+        QuickRanking.Instance.SaveRanking(PlayerPrefs.GetString("UserName"), PlayerPrefs.GetInt("Weekly"));
+
+
         SceneManager.LoadScene("ScoreScene");
     }
 }

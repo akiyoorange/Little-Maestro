@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class QuickRanking : MonoBehaviour
 {
     public string rankingClassName = "Ranking";//NCMB側のランキングクラス名//
-    public int count = 10;//いくつまでランキングデータを取得するか//
+    public int count = 12;//いくつまでランキングデータを取得するか//
     private List<RankingData> rankingDataList = new List<RankingData>();//取得したランキングデータ//
     public bool IsRankingDataValid { get; private set; }//ランキングデータの取得に成功しているか//
 
@@ -144,7 +144,7 @@ public class QuickRanking : MonoBehaviour
                 //さっき保存したスコアがあった場合は赤に着色する//
                 if (rankingData.objectid == currentObjectid)
                 {
-                    text += "<color=red>" + rankNum + ": \t" + name + ": \t" + score + "</color> \n";
+                    text += "<color=yellow>" + rankNum + ": \t" + name + ": \t" + score + "</color> \n";
                 }
                 else
                 {
