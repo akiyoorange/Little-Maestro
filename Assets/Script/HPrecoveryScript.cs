@@ -17,32 +17,49 @@ public class HPrecoveryScript : MonoBehaviour
     {
         RecoveryTimeText = GameObject.Find("RecoveryTimeText");
         RecoveryTimescript = RecoveryTimeText.GetComponent<RecoveryTimeScript>();
+
+        if (RecoveryTimeScript.MAXNotes == true)
+        {
+            Notes = 10;
+        }
+        else
+        {
+            Notes = PlayerPrefs.GetInt("Notes") + (RecoveryTimeScript.hour / 2);
+        }
+        Notestext.text = Notes.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        PlayerPrefs.GetInt("Notes");
-
-        Notestext.text = ((PlayerPrefs.GetInt("Notes")).ToString() + "/10");
-        PlayerPrefs.Save();
-
-        bool GetNotes = RecoveryTimescript.GetNotes;
-
-        //カウントダウンの方で二時間経ったフラグがTrueになったら体力を増やす
-        if (GetNotes == true)
+        if (Notes == 10)
         {
-            PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") + 1);
+            Notestext.text = "10/10";
+        }
+        else
+        {
+
+            PlayerPrefs.GetInt("Notes");
+
             Notestext.text = ((PlayerPrefs.GetInt("Notes")).ToString() + "/10");
             PlayerPrefs.Save();
 
-            if ((PlayerPrefs.GetInt("Notes")) <= 10)
+            bool GetNotes = RecoveryTimescript.GetNotes;
+
+            //カウントダウンの方で二時間経ったフラグがTrueになったら体力を増やす
+            if (GetNotes == true)
             {
-                Notestext.text = "10";
+                PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") + 1);
+                Notestext.text = ((PlayerPrefs.GetInt("Notes")).ToString() + "/10");
+                PlayerPrefs.Save();
+
+                if ((PlayerPrefs.GetInt("Notes")) <= 10)
+                {
+                    Notestext.text = "10";
+                }
             }
         }
-
 
     }
 }

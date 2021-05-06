@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ErhythmSceneScript : MonoBehaviour
 {
+    public GameObject NotesShortagePanel;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,16 @@ public class ErhythmSceneScript : MonoBehaviour
 
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("EasyRhythmScene");
+        if (PlayerPrefs.GetInt("Notes") >= 1)
+        {
+            SceneManager.LoadScene("EasyRhythmScene");
 
-        PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") - 1);
+            PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") - 1);
+        }
+        else
+        {
+            NotesShortagePanel.SetActive(true);
+        }
+        
     }
 }

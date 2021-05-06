@@ -1,26 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System;
 
-public class EReadingSceneScript : MonoBehaviour
+public class WeeklyScoreReset : MonoBehaviour
 {
+    DateTime Now;
+    
     // Start is called before the first frame update
     void Start()
     {
+        Now = DateTime.Now;
         
+    
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public void OnClickStartButton()
-    {
-        SceneManager.LoadScene("EasyReadingScene");
-
-        PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") - 1);
     }
 }
