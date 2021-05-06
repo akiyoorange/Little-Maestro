@@ -62,6 +62,8 @@ public class RecoveryTimeScript : MonoBehaviour
             second = SleepSeconds;
         }
 
+        Debug.Log((hour.ToString())+(minute.ToString())+(second.ToString()));
+
     }
 
     // Use this for initialization
@@ -78,11 +80,10 @@ public class RecoveryTimeScript : MonoBehaviour
     void Update()
     {
 
-        GetNotes = false;
 
         second -= Time.deltaTime;
 
-        //Notesが10じゃない時に2時間カウントダウンを繰り返す
+        //Notesが満タンでない時に2時間カウントダウンを繰り返す
         if (MAXNotes == false)
         {
 
@@ -112,6 +113,8 @@ public class RecoveryTimeScript : MonoBehaviour
             RecoveryTimeText.text = "-" + hour.ToString() + ":" + minute.ToString("00");
 
         }
+
+        GetNotes = false;
     }
 
 

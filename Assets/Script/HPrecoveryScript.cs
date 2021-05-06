@@ -26,7 +26,7 @@ public class HPrecoveryScript : MonoBehaviour
         {
             Notes = PlayerPrefs.GetInt("Notes") + (RecoveryTimeScript.hour / 2);
         }
-        Notestext.text = Notes.ToString();
+        Notestext.text = Notes.ToString()+("/10");
     }
 
     // Update is called once per frame
@@ -52,14 +52,9 @@ public class HPrecoveryScript : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") + 1);
                 Notestext.text = ((PlayerPrefs.GetInt("Notes")).ToString() + "/10");
-                PlayerPrefs.Save();
-
-                if ((PlayerPrefs.GetInt("Notes")) <= 10)
-                {
-                    Notestext.text = "10";
-                }
             }
         }
+        PlayerPrefs.Save();
 
     }
 }

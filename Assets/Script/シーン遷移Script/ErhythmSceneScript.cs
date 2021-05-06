@@ -21,16 +21,12 @@ public class ErhythmSceneScript : MonoBehaviour
 
     public void OnClickStartButton()
     {
-        if (PlayerPrefs.GetInt("Notes") >= 1)
-        {
+      
+        
             SceneManager.LoadScene("EasyRhythmScene");
 
-            PlayerPrefs.SetInt("Notes", PlayerPrefs.GetInt("Notes") - 1);
-        }
-        else
-        {
-            NotesShortagePanel.SetActive(true);
-        }
+        
+  
         
     }
 }

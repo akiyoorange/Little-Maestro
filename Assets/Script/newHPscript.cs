@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System;
 
-public class EReadingSceneScript : MonoBehaviour
+public class newHPscript : MonoBehaviour
 {
+    public Text Notestext;
+
+    public static bool MAXNotes;
+
+    DateTime now = DateTime.Now;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +22,5 @@ public class EReadingSceneScript : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void OnClickStartButton()
-    {
-        SceneManager.LoadScene("EasyReadingScene");
     }
 }

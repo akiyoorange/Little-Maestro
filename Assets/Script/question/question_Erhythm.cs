@@ -177,25 +177,26 @@ public class question_Erhythm : MonoBehaviour
     //正解番号を取得する関数
     void GetRightNumber()
     {
-        if (m_Image.sprite == m_Sprite[1] || m_Image.sprite == m_Sprite[2] || m_Image.sprite == m_Sprite[5] || m_Image.sprite == m_Sprite[18]
-            || m_Image.sprite == m_Sprite[20] || m_Image.sprite == m_Sprite[21] || m_Image.sprite == m_Sprite[24] || m_Image.sprite == m_Sprite[38] || m_Image.sprite == m_Sprite[41])
+        if (m_Image.sprite == m_Sprite[1] || m_Image.sprite == m_Sprite[2] || m_Image.sprite == m_Sprite[5] || m_Image.sprite == m_Sprite[12] || m_Image.sprite == m_Sprite[18]
+            || m_Image.sprite == m_Sprite[20] || m_Image.sprite == m_Sprite[21] || m_Image.sprite == m_Sprite[24] || m_Image.sprite == m_Sprite[38] || m_Image.sprite == m_Sprite[39]
+            || m_Image.sprite == m_Sprite[41])
         {
             RightNumber = 1;
         }
-        else if (m_Image.sprite == m_Sprite[3] || m_Image.sprite == m_Sprite[4] || m_Image.sprite == m_Sprite[9] || m_Image.sprite == m_Sprite[13] || m_Image.sprite == m_Sprite[16]
-             || m_Image.sprite == m_Sprite[27] || m_Image.sprite == m_Sprite[30] || m_Image.sprite == m_Sprite[32] || m_Image.sprite == m_Sprite[37])
+        else if (m_Image.sprite == m_Sprite[0] || m_Image.sprite == m_Sprite[3] || m_Image.sprite == m_Sprite[4] || m_Image.sprite == m_Sprite[9] || m_Image.sprite == m_Sprite[13] || m_Image.sprite == m_Sprite[16]
+             || m_Image.sprite == m_Sprite[27] || m_Image.sprite == m_Sprite[32] || m_Image.sprite == m_Sprite[37])
         {
             RightNumber = 2;
         }
-        else if (m_Image.sprite == m_Sprite[0] || m_Image.sprite == m_Sprite[6] || m_Image.sprite == m_Sprite[8]
-            || m_Image.sprite == m_Sprite[10] || m_Image.sprite == m_Sprite[11] || m_Image.sprite == m_Sprite[14] || m_Image.sprite == m_Sprite[15] || m_Image.sprite == m_Sprite[19]
-             || m_Image.sprite == m_Sprite[23] || m_Image.sprite == m_Sprite[26] || m_Image.sprite == m_Sprite[35] || m_Image.sprite == m_Sprite[36])
+        else if ( m_Image.sprite == m_Sprite[6] || m_Image.sprite == m_Sprite[8]|| m_Image.sprite == m_Sprite[10] || m_Image.sprite == m_Sprite[11] || m_Image.sprite == m_Sprite[14]
+            || m_Image.sprite == m_Sprite[15] || m_Image.sprite == m_Sprite[19]
+             || m_Image.sprite == m_Sprite[23] || m_Image.sprite == m_Sprite[26] || m_Image.sprite == m_Sprite[30] || m_Image.sprite == m_Sprite[35] || m_Image.sprite == m_Sprite[36])
         {
             RightNumber = 3;
         }
-        else if (m_Image.sprite == m_Sprite[7] || m_Image.sprite == m_Sprite[12] || m_Image.sprite == m_Sprite[17] || m_Image.sprite == m_Sprite[22] || m_Image.sprite == m_Sprite[25]
+        else if (m_Image.sprite == m_Sprite[7] || m_Image.sprite == m_Sprite[17] || m_Image.sprite == m_Sprite[22] || m_Image.sprite == m_Sprite[25]
              || m_Image.sprite == m_Sprite[28] || m_Image.sprite == m_Sprite[29] || m_Image.sprite == m_Sprite[31] || m_Image.sprite == m_Sprite[33] || m_Image.sprite == m_Sprite[34]
-              || m_Image.sprite == m_Sprite[39] || m_Image.sprite == m_Sprite[40] || m_Image.sprite == m_Sprite[42])
+              || m_Image.sprite == m_Sprite[40] || m_Image.sprite == m_Sprite[42])
         {
             RightNumber = 4;
         }
